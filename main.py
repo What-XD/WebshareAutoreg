@@ -55,7 +55,7 @@ class webshare():
 
 def reg_and_get():
     while True:
-        c = webshare(solver=CaptchaSolver(CaptchaSolvingService.CAPTCHA_GURU, "21da5a4e9b179e583a715f844b9e221b"), proxy=str(MGR.next_proxy()))
+        c = webshare(solver=CaptchaSolver(config.CaptchaSolvingService, config.CaptchaSolvingToken), proxy=str(MGR.next_proxy()))
         token = c.register()
         proxys = c.get_proxys(token)
 
