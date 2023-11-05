@@ -61,7 +61,7 @@ def reg_and_get():
 
         text = ""
         for proxy in proxys['results']:
-            text += f"{proxy['proxy_address']}:{proxy['port']}|{proxy['username']}:{proxy['password']}\n"
+            text += f"{proxy['proxy_address']}:{proxy['port']}@{proxy['username']}:{proxy['password']}\n"
 
         with open("AutoProxy.txt", "r+") as f:
             f.seek(0, 2)
